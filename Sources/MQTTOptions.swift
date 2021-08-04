@@ -9,9 +9,9 @@
 import Foundation
 
 public struct MQTTOptions {
-    var host: String!
+    public var host: String!
     private var _port: Int?
-    var port: Int {
+    public var port: Int {
         get {
             return _port ?? (useTLS ? 8883 : 1883)
         }
@@ -19,19 +19,19 @@ public struct MQTTOptions {
             _port = newValue
         }
     }
-    var cleanSession = true
-    var will: MQTTMessage?
-    var password: String? = nil
-    var username: String? = nil
-    var keepAliveInterval: UInt16 = 10
-    var clientId: String = UUID().uuidString
-    var useTLS = false
-    var autoReconnect: Bool = true
-    var autoReconnectTimeout: Double = 60
-    var bufferSize: Int = 4096
-    var readQosClass: DispatchQoS.QoSClass = .background
+    public var cleanSession = true
+    public var will: MQTTMessage?
+    public var password: String? = nil
+    public var username: String? = nil
+    public var keepAliveInterval: UInt16 = 10
+    public var clientId: String = UUID().uuidString
+    public var useTLS = false
+    public var autoReconnect: Bool = true
+    public var autoReconnectTimeout: Double = 60
+    public var bufferSize: Int = 4096
+    public var readQosClass: DispatchQoS.QoSClass = .background
     
-    init(host: String, port: Int? = nil) {
+    public init(host: String, port: Int? = nil) {
         self.host = host
     }
 }
