@@ -48,7 +48,7 @@ internal struct MQTTPacket {
     }
     
     var encoded: Data {
-        var bytes = Data(bytes: [header])
+        var bytes = Data([header])
         bytes.append(remainingLength)
         bytes.append(variableHeader)
         bytes.append(payload)

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol MQTTSessionDelegate: class {
+public protocol MQTTSessionDelegate: AnyObject {
     func mqttSession(_ session: MQTTSession, didRecieveMessage: MQTTMessage)
     func mqttSession(_ session: MQTTSession, didSubscribeToTopics: [String], withMaxQoSLevel: [MQTTQoSLevel])
     func mqttSession(_ session: MQTTSession, didUnsubscribeToTopics: [String])
