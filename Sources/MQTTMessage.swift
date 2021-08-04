@@ -10,12 +10,12 @@ import Foundation
 
 
 public struct MQTTMessage {
-    var topic: String
-    var payload: Data
-    var qos: MQTTQoSLevel
-    var retained: Bool
+    public var topic: String
+    public var payload: Data
+    public var qos: MQTTQoSLevel
+    public var retained: Bool
     
-    var string: String? {
+    public var string: String? {
         return String(bytes: payload, encoding: .utf8)
     }
     
