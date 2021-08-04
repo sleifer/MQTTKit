@@ -58,10 +58,6 @@ internal struct MQTTPacket {
     init(header: UInt8) {
         self.header = header
     }
-    
-    init(header: MQTTPacket.Header) {
-        self.init(header: header)
-    }
 }
 
 // MARK: - Publish Packet
